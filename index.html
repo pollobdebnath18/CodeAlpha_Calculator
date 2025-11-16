@@ -9,39 +9,41 @@
     <link rel="stylesheet" href="style/styles.css" />
   </head>
   <body>
-    <section class="max-w-md min-h-screen mx-auto bg-slate-200">
+    <section class="max-w-md min-h-screen mx-auto bg-slate-300">
       <div class="display">
-        <input class="display-input" type="text" />
+        <input id="display" class="display-input" type="text"/>
       </div>
       <div class="row-ac">
-        <button class="ac">AC</button>
-        <button class="ac">DE</button>
-        <button class="ac">.</button>
-        <button class="ac">/</button>
+        <button class="ac-ac1" onclick="deleteAll()">AC</button>
+        <button class="de-de" onclick="deleteLast()">DE</button>
+        <button class="ac" onclick="add('.')">.</button>
+        <button class="ac-ac" onclick="add('/')">/</button>
       </div>
        <div class="row-num">
-        <button class="ac">7</button>
-        <button class="ac">8</button>
-        <button class="ac">9</button>
-        <button class="ac">*</button>
+        <button class="ac" onclick="add('7')">7</button>
+        <button class="ac" onclick="add('8')">8</button>
+        <button class="ac" onclick="add('9')">9</button>
+        <button class="ac-ac" onclick="add('*')">*</button>
       </div>
        <div class="row-num">
-        <button class="ac">4</button>
-        <button class="ac">5</button>
-        <button class="ac">6</button>
-        <button class="ac">-</button>
+        <button class="ac" onclick="add('4')">4</button>
+        <button class="ac" onclick="add('5')">5</button>
+        <button class="ac" onclick="add('6')">6</button>
+        <button class="ac-ac" onclick="add('-')">-</button>
       </div>
        <div class="row-num">
-        <button class="ac">1</button>
-        <button class="ac">2</button>
-        <button class="ac">3</button>
-        <button class="ac">+</button>
+        <button class="ac" onclick="add('1')">1</button>
+        <button class="ac" onclick="add('2')">2</button>
+        <button class="ac" onclick="add('3')">3</button>
+        <button class="ac-ac" onclick="add('+')">+</button>
       </div>
       <div class="row-num-bottom">
-        <button class="ac">00</button>
-        <button class="ac">0</button>
-        <button class="ac-equal">=</button>
+        <button class="ac" onclick="add('00')">00</button>
+        <button class="ac" onclick="add('0')">0</button>
+        <button class="ac-equal " onclick="calculate()">=</button>
       </div>
     </section>
+
+    <script src="calculation.js"></script>
   </body>
 </html>
